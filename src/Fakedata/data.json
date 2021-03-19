@@ -1,0 +1,25 @@
+[{
+    "id": 1,
+    "name": "Bus",
+    "location": "Motijhil",
+    "photo": "https://www.pikpng.com/pngl/m/26-269661_bus-png-image-scania-bus-png-clipart.png",
+    "cost": 45
+  }, {
+    "id": 2,
+    "name": "Bike",
+    "location": "Mirpur",
+    "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpzxtXfyhcVS2MX23bxuhhI1PYjLCXFX87eA&usqp=CAU",
+    "cost": 120
+  }, {
+    "id": 3,
+    "name": "Car",
+    "location": "Mohakhali",
+    "photo": "https://pngimg.com/uploads/mercedes/mercedes_PNG80135.png",
+    "cost": 250
+  }, {
+    "id": 4,
+    "name": "Train",
+    "location": "Uttora",
+    "photo": "https://www.vhv.rs/dpng/d/106-1067783_indian-railway-train-png-transparent-png.png",
+    "cost": 75
+  }]
