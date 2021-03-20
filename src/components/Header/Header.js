@@ -4,7 +4,7 @@ import './Header.css'
 import { Link } from "react-router-dom";
 const Header = () => {
   return (
-    <div className="">
+    <div className="container">
       <div className="row">
         <div className="col-md-5">
           <img
@@ -14,7 +14,7 @@ const Header = () => {
           />
         </div>
 
-<nav className="col-md-7">
+<nav className="col-md-7 ">
 {/* <Link to="/home">Home</Link> */}
           <Link to="/home">Home</Link>
           <Link to="/destination">Destination</Link>
