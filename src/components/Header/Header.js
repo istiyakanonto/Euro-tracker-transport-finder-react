@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-md-5">
+        <div className="  col-sm-12 col-md-5 ">
           <img
             style={{ height: "175px", weidth: "175px" }}
             src="https://play-lh.googleusercontent.com/CXZBe3RtB-nqvfCPOcgMP2Mbi0YZTtBWWOfrCUiMGPAJFqKnxVwyCELU2Hmh5CfMlfq-"
@@ -14,7 +14,7 @@ const Header = () => {
           />
         </div>
 
-<nav className="col-md-7 ">
+<nav className=" col-sm-12 col-md-7  ">
 {/* <Link to="/home">Home</Link> */}
           <Link to="/home">Home</Link>
           <Link to="/destination">Destination</Link>

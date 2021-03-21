@@ -1,7 +1,13 @@
+.destination-style{
+   
+    
+}
+
 .card-style
 {
-    border: 1px solid cyan;
+    
     margin-top:100px;
+    
    
 }
 .card-style img{
@@ -9,3 +15,14 @@
     height:50px;
 
 }
+.map-style{
+    height:250px;
+    width:200px;
+   
+    
+}
+.div-style{
+    border: 1px solid gray;
+    padding-left: 60px;
+}
+
