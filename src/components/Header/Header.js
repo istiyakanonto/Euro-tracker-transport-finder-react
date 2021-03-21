@@ -1,6 +1,6 @@
 import { Button } from "react-bootstrap";
 import React from "react";
-import './Header.css'
+import "./Header.css";
 import { Link } from "react-router-dom";
 const Header = () => {
   return (
@@ -14,22 +14,23 @@ const Header = () => {
           />
         </div>
 
-<nav className=" col-sm-12 col-md-7  ">
-{/* <Link to="/home">Home</Link> */}
+        <nav className=" col-sm-12 col-md-7  ">
           <Link to="/home">Home</Link>
           <Link to="/destination">Destination</Link>
           <a href="">Blog</a>
           <a href="">Contact</a>
           <Link to="/login">
-          <button style={{marginLeft:'40px'}} type="button" class="btn btn-danger">
-            LogIn
-          </button>
+            <button
+              style={{ marginLeft: "40px" }}
+              type="button"
+              class="btn btn-danger"
+            >
+              LogIn
+            </button>
           </Link>
         </nav>
-</div>
-       
       </div>
-    
+    </div>
   );
 };
 

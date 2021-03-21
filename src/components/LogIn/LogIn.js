@@ -6,8 +6,6 @@ import firebaseConfig from "../../firebase.config";
 import "./Login.css";
 import {UserContext} from "../../App"
 import { useHistory, useLocation } from "react-router";
-
-
 const LogIn = () => {
   const [loggedInUser,setLoggedInUser]=useContext(UserContext)
   const history = useHistory();
@@ -17,8 +15,7 @@ if(firebase.apps.length===0)
 {
   firebase.initializeApp(firebaseConfig);
 }
-
-  const [newUser,setNewUser]=useState(false)
+const [newUser,setNewUser]=useState(false)
   const [user,setUser]=useState({
     isSignedIn:false,
     name:'',
@@ -54,28 +51,20 @@ const handleFbSignIn=()=>{
   .auth()
   .signInWithPopup(fbProvider)
   .then((result) => {
-    /** @type {firebase.auth.OAuthCredential} */
     var credential = result.credential;
-
-    // The signed-in user info.
     var user = result.user;
 console.log('fb use after sign in',user)
-    // This gives you a Facebook Access Token. You can use it to access the Facebook API.
     var accessToken = credential.accessToken;
 
-    // ...
+    
   })
   .catch((error) => {
-    // Handle Errors here.
+   
     var errorCode = error.code;
     var errorMessage = error.message;
     console.log(errorMessage)
-    // The email of the user's account used.
     var email = error.email;
-    // The firebase.auth.AuthCredential type that was used.
     var credential = error.credential;
-
-    // ...
   });
  
 }
@@ -122,8 +111,7 @@ const handleSubmit=(e)=>{
   if(newUser && user.email&& user.password)
   {
     firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
-   
-      .then(res=>{
+   .then(res=>{
        const newUserInfo={...user}
        newUserInfo.error=''
        newUserInfo.success=true
@@ -165,24 +153,17 @@ user.updateProfile({
   displayName: name
  
 }).then(function() {
-  // Update successful.
+  
   console.log('user Name Updated')
 }).catch(function(error) {
-  // An error happened.
+ 
   console.log('error')
 });
 }
   return (
-    
-      
-<div className="logIn container">
-
-
-
- {user.isSignedIn && <p>Welcome: {user.name}</p>}
-
-
- <div>
+    <div className="logIn container">
+{user.isSignedIn && <p>Welcome: {user.name}</p>}
+<div>
       <h1>  Authentication</h1>
     <input type="checkbox" onChange={()=>setNewUser(!newUser)} name="newUser" id=""/>
     <label htmlFor="newUser">New User Sign Up</label>
@@ -227,10 +208,7 @@ user.updateProfile({
           </button>
      
 </div>
-
-
-        
-  );
+ );
     }
 
 export default LogIn;
